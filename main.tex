@@ -1,0 +1,336 @@
+\documentclass[
+   ngerman          % neue deutsche Rechtschreibung
+  ,a4paper          % Papiergrösse
+  ,12pt             % Schriftgrösse
+  ,pdftex
+%  ,disable         % Todo-Markierungen auschalten
+]{scrreprt}
+
+\usepackage[utf8]{inputenc}        % UTF-8 codierte Dateien
+                                   % Dieses Dokument ist unter Unix erstellt, daher
+                                   % wird diese Input-Codierung benutzt.
+\usepackage[T1]{fontenc}
+
+\usepackage{bericht}
+
+\usepackage{gradientframe}
+
+\usepackage{colortbl}
+
+\usepackage{rotating}
+
+\usepackage{eurosym}
+
+\usepackage{paralist}
+
+\usepackage{enumitem}
+
+\usepackage{rotating}
+
+\usepackage{multirow}
+
+\usepackage{multicol} 
+
+\usepackage{arydshln}
+
+\usepackage{color}
+
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage{listings}             % Include the listings-package for Code
+%%\lstset{language=[Sharp]C} % Set your language (you can change the language for each code-block optionally)
+
+\lstset{
+language=csh,
+basicstyle=\normalsize\ttfamily,
+numbers=left,
+numberstyle=\tiny,
+numbersep=5pt,
+numberstyle=\scriptsize,
+tabsize=2,
+extendedchars=true,
+breaklines=true,
+frame=b,
+stringstyle=\color{blue}\ttfamily,
+showspaces=false,
+showtabs=false,
+xleftmargin=17pt,
+framexleftmargin=17pt,
+framexrightmargin=5pt,
+framexbottommargin=4pt,
+commentstyle=\color{green},
+morecomment=[l]{//}, %use comment-line-style!
+morecomment=[s]{/*}{*/}, %for multiline comments
+showstringspaces=false,
+morekeywords={ abstract, event, new, struct,
+as, explicit, null, switch,
+base, extern, object, this,
+bool, false, operator, throw,
+break, finally, out, true,
+byte, fixed, override, try,
+case, float, params, typeof,
+catch, for, private, uint,
+char, foreach, protected, ulong,
+checked, goto, public, unchecked,
+class, if, readonly, unsafe,
+const, implicit, ref, ushort,
+continue, in, return, using,
+decimal, int, sbyte, virtual,
+default, interface, sealed, volatile,
+delegate, internal, short, void,
+do, is, sizeof, while,
+double, lock, stackalloc,
+else, long, static,
+enum, namespace, string},
+keywordstyle=\color{red},
+identifierstyle=\color{black},
+backgroundcolor=\color{white},
+}
+
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+
+\usepackage{minted}
+
+\usepackage{float}
+\restylefloat{figure}
+
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\renewcaptionname{ngerman}{\abstractname}{Kurzzusammenfassung}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Angaben zur Arbeit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Autor}{Avelina Ott}
+\newcommand{\MatrikelNummer}{4386414}
+\newcommand{\Kursbezeichnung}{TINF15B4}
+
+\newcommand{\FirmenName}{WebCommerce GmbH}
+\newcommand{\FirmenStadt}{Offenburg}
+\newcommand{\FirmenLogoDeckblatt}{\includegraphics[width=3cm]{bilder/DHBW.png}}
+\newcommand{\BetreuerFirma}{Markus Schill}
+\newcommand{\BetreuerDHBW}{Dr. Werner Geiger}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Was}{Bachelorarbeit}
+% Wird auf dem Deckblatt in der Erklärung benutzt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% Benutzt man das "biblatex"-Paket, dann muß das hier stehen:
+% siehe auch die mit BIBLATEX markierten Zeilen in bericht.sty
+\bibliography{literatur}
+
+\begin{document}
+\pagenumbering{Roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Titel}{Web-to-Print: Export von Terminen in eine kundenspezifische DOCX-Datei}
+\newcommand{\AbgabeDatum}{27. August 2018}
+
+\newcommand{\Dauer}{12 Wochen}
+
+\newcommand{\Abschluss}{Bachelor of Science}
+
+\newcommand{\Studiengang}{Angewandte Informatik}
+
+\hypersetup{%%
+  pdfauthor={\Autor},
+  pdftitle={\Titel},
+  pdfsubject={\Was}
+}
+
+
+
+
+
+\begin{titlepage}
+\begin{center}
+\vspace*{-2cm}
+%\FirmenLogoDeckblatt
+\hfill\includegraphics[width=4cm]{bilder/DHBW}\\[2cm]
+{\Huge \Titel}\\[2cm]
+{\Huge\scshape \Was}\\[2cm]
+{\large für die Prüfung zum}\\[0.5cm]
+{\Large \Abschluss}\\[0.5cm]
+{\large des Studienganges \Studiengang}\\[0.5cm]
+{\large an der}\\[0.5cm]
+{\large Dualen Hochschule Baden-Württemberg Karlsruhe}\\[0.5cm]
+{\large von}\\[0.5cm]
+{\large\bfseries \Autor}\\[1cm]
+{\large \AbgabeDatum}
+\vfill
+\end{center}
+\begin{tabular}{l@{\hspace{2cm}}l}
+Bearbeitungszeitraum	         & \Dauer 			\\
+%Matrikelnummer	                 & \MatrikelNummer	\\
+Kurs			         & \Kursbezeichnung		\\
+Ausbildungsfirma	         & \FirmenName			\\
+			         %& \FirmenStadt			\\
+Betreuer der Ausbildungsfirma	 & \BetreuerFirma		\\
+Gutachter/in der Studienakademie	 & \BetreuerDHBW		\\
+\end{tabular}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Nur für Bachelorarbeiten einfügen:
+
+\selectlanguage{ngerman}
+%\begin{abstract}
+%\end{abstract}
+
+
+\newpage
+\include{eid_erklaerung}
+\tableofcontents           % Inhaltsverzeichnis hier ausgeben
+\listoffigures             % Liste der Abbildungen
+\listoftables              % Liste der Tabellen
+\lstlistoflistings         % Liste der Listings
+
+
+\lstdefinelanguage{Velocity}
+{
+  %basicstyle=\ttfamily,
+  morestring=[s]{"}{"},
+  morekeywords={set, foreach, end, if, else},
+  otherkeywords={\#, ., get},
+  %moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\$}{\ },
+  %morecomment=[s][\color{red}]{.}{.},
+  %moredelim=[s][\color{red}]{\$}{)},
+  %moredelim=[s][\color{red}]{\$}{.},
+  morecomment=[s][\color{green}]{.}{(},
+  commentstyle=\color{green},
+  stringstyle=\color{blue},
+  keywordstyle=\color{green}
+}
+
+\lstdefinelanguage{HTML5}{
+        language=html,
+        sensitive=true, 
+        alsoletter={<>=-},
+        otherkeywords={
+        % HTML tags
+        <html>, <head>, <title>, </title>, <meta, />, </head>, <body>,
+        <canvas, \/canvas>, <script>, </script>, <td>, </td>, <tr>, </tr>, </body>, </html>, <!, html>, <style>, </style>, ><
+        },  
+        ndkeywords={
+        % General
+        =,
+        % HTML attributes
+        charset=, id=, width=, height=,
+        % CSS properties
+        border:, transform:, -moz-transform:, transition-duration:, transition-property:, transition-timing-function:
+        },  
+        morecomment=[s]{<!--}{-->},
+        tag=[s]
+}
+
+
+
+
+
+%\lstset{language=Java,
+%	%basicstyle=\fontsize{10}{13}\ttfamily,
+%	keywordstyle=\color{javapurple}\bfseries,
+%	stringstyle=\color{javared},
+%	commentstyle=\color{javagreen},
+%	morecomment=[s][\color{javadocblue}]{/**}{*/},
+%	numbers=left,
+%	numberstyle=\tiny\color{black},
+%	stepnumber=1,
+%	numbersep=5pt,
+%	tabsize=2,
+%	showspaces=false,
+%	showstringspaces=false,
+%	breaklines=true,
+%	breakautoindent=true,
+%	morekeywords={set, foreach, end}
+%}
+
+
+\lstset{
+numbers = left,
+frame = single,
+framexleftmargin=15pt,
+breaklines=true
+}
+
+% Jetzt kommt der "eigentliche" Text
+\include{abk}              % Abkürzungsverzeichnis
+
+\pagenumbering{arabic}
+
+\include{einleitung}
+\include{grundlagen}
+\include{anforderungserhebung}
+\include{evaluierung}
+\include{projektumgebung}
+ \include{planung}
+\include{implementierung}
+\include{testplan}
+\include{zusammenfassung}
+%\include{anhang}
+\pagenumbering{Roman}
+
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\printbibliography
+
+
+
+% Ab hier beginnt der Anhang
+\appendix
+%\addcontentsline{toc}{chapter}{Anhang}
+%\appendix
+%\appendixtoc
+%\newpage
+
+\renewcommand*{\thesection}{\Alph{section}}
+\chapter*{\appendixname}
+%\include{anhang}
+%\begin{enumerate}[label=\bfseries \LARGE \Alph*, ref=\Alph*]
+%	\item Bilder \label{app:bilder}
+%   \item Umfrage \label{app:umfrage}
+%  \item manueller Testplan \label{app:maTestplan}
+%\end{enumerate}
+
+
+
+
+% Haben Sie das "biblatex"-Paket nicht installiert, benutzen Sie folgendes:
+% Ohne das "biblatex"-Paket (s. bericht.sty) produziert folgendes
+% "deutsche" Zitate in Literaturverzeichnissen gemaß der Norm DIN 1505,
+% Teil 2 vom Jan. 1984.
+% Die Zitatmarken werden alphabetisch nach Verfassern
+% sortiert und sind durch abgekürzte Verfasserbuchstaben plus
+% Erscheinungsjahr in eckigen Klammern gekennzeichnet.
+
+%\bibliographystyle{alphadin}
+%\bibliography{literatur}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLATEX
+% Benutzt man das "biblatex"-Paket, muß man folgendes schreiben:
+%\def\refname{Literaturverzeichnis}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\end{document}
