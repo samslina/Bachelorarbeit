@@ -119,6 +119,22 @@ backgroundcolor=\color{white},
 \newcommand{\BetreuerFirma}{Markus Schill}
 \newcommand{\BetreuerDHBW}{Dr. Werner Geiger}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Befehle in der Arbeit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\edith}{EDITH}
+\newcommand{\cms}{Content-Management-System}
+\newcommand{\cmsEdith}{CMS EDITH}
+
+\newcommand{\exkurs}[2]{
+\begin{leftbar}
+	\textbf{Exkurs - } \textit{#1}: #2
+\end{leftbar}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\Was}{Bachelorarbeit}
@@ -275,14 +291,13 @@ breaklines=true
 \pagenumbering{arabic}
 
 \include{einleitung}
-\include{grundlagen}
+\include{heutigerStand}
 \include{anforderungserhebung}
-\include{evaluierung}
-\include{projektumgebung}
- \include{planung}
+\include{planung}
 \include{implementierung}
-\include{testplan}
+\include{evaluierung}
 \include{zusammenfassung}
+
 %\include{anhang}
 \pagenumbering{Roman}
 
