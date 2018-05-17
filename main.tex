@@ -7,9 +7,6 @@
 ]{scrreprt}
 
 \usepackage[utf8]{inputenc}        % UTF-8 codierte Dateien
-                                   % Dieses Dokument ist unter Unix erstellt, daher
-                                   % wird diese Input-Codierung benutzt.
-\usepackage[T1]{fontenc}
 
 \usepackage{bericht}
 
@@ -34,6 +31,8 @@
 \usepackage{arydshln}
 
 \usepackage{color}
+
+\usepackage{subfigure}
 
 \usepackage[onehalfspacing]{setspace}
 
@@ -96,7 +95,6 @@ backgroundcolor=\color{white},
 \usepackage{float}
 \restylefloat{figure}
 
-
 \definecolor{javared}{rgb}{0.6,0,0} % for strings
 \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
 \definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
@@ -107,7 +105,7 @@ backgroundcolor=\color{white},
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Angaben zur Arbeit
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\Autor}{Avelina Ott}
 \newcommand{\MatrikelNummer}{4386414}
@@ -119,31 +117,10 @@ backgroundcolor=\color{white},
 \newcommand{\BetreuerFirma}{Markus Schill}
 \newcommand{\BetreuerDHBW}{Dr. Werner Geiger}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Befehle in der Arbeit
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\edith}{EDITH}
-\newcommand{\cms}{Content-Management-System}
-\newcommand{\cmsEdith}{CMS EDITH}
-
-\newcommand{\exkurs}[2]{
-\begin{leftbar}
-	\textbf{Exkurs - } \textit{#1}: #2
-\end{leftbar}
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newcommand{\Was}{Bachelorarbeit}
 % Wird auf dem Deckblatt in der Erklärung benutzt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 
 % Benutzt man das "biblatex"-Paket, dann muß das hier stehen:
 % siehe auch die mit BIBLATEX markierten Zeilen in bericht.sty
@@ -167,10 +144,6 @@ backgroundcolor=\color{white},
   pdftitle={\Titel},
   pdfsubject={\Was}
 }
-
-
-
-
 
 \begin{titlepage}
 \begin{center}
@@ -200,8 +173,7 @@ Gutachter/in der Studienakademie	 & \BetreuerDHBW		\\
 \end{tabular}
 \end{titlepage}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Nur für Bachelorarbeiten einfügen:
 
 \selectlanguage{ngerman}
@@ -255,29 +227,6 @@ Gutachter/in der Studienakademie	 & \BetreuerDHBW		\\
         tag=[s]
 }
 
-
-
-
-
-%\lstset{language=Java,
-%	%basicstyle=\fontsize{10}{13}\ttfamily,
-%	keywordstyle=\color{javapurple}\bfseries,
-%	stringstyle=\color{javared},
-%	commentstyle=\color{javagreen},
-%	morecomment=[s][\color{javadocblue}]{/**}{*/},
-%	numbers=left,
-%	numberstyle=\tiny\color{black},
-%	stepnumber=1,
-%	numbersep=5pt,
-%	tabsize=2,
-%	showspaces=false,
-%	showstringspaces=false,
-%	breaklines=true,
-%	breakautoindent=true,
-%	morekeywords={set, foreach, end}
-%}
-
-
 \lstset{
 numbers = left,
 frame = single,
@@ -289,14 +238,17 @@ breaklines=true
 \include{abk}              % Abkürzungsverzeichnis
 
 \pagenumbering{arabic}
-
-\include{einleitung}
-\include{heutigerStand}
-\include{anforderungserhebung}
-\include{planung}
-\include{implementierung}
-\include{evaluierung}
-\include{zusammenfassung}
+\include{befehle}
+\include{01_einleitung}
+\include{02_anforderungserhebung}
+\include{03_prototyp}
+\include{04_web2print}
+\include{05_templateengine}
+\include{06_heutigerStand}
+\include{07_planung}
+\include{08_implementierung}
+\include{09_evaluierung}
+\include{10_zusammenfassung}
 
 %\include{anhang}
 \pagenumbering{Roman}
@@ -321,17 +273,6 @@ breaklines=true
 %   \item Umfrage \label{app:umfrage}
 %  \item manueller Testplan \label{app:maTestplan}
 %\end{enumerate}
-
-
-
-
-% Haben Sie das "biblatex"-Paket nicht installiert, benutzen Sie folgendes:
-% Ohne das "biblatex"-Paket (s. bericht.sty) produziert folgendes
-% "deutsche" Zitate in Literaturverzeichnissen gemaß der Norm DIN 1505,
-% Teil 2 vom Jan. 1984.
-% Die Zitatmarken werden alphabetisch nach Verfassern
-% sortiert und sind durch abgekürzte Verfasserbuchstaben plus
-% Erscheinungsjahr in eckigen Klammern gekennzeichnet.
 
 %\bibliographystyle{alphadin}
 %\bibliography{literatur}
