@@ -39,6 +39,8 @@
 \usepackage{listings}             % Include the listings-package for Code
 %%\lstset{language=[Sharp]C} % Set your language (you can change the language for each code-block optionally)
 
+\setlength{\parindent}{0em} 
+
 \lstset{
 language=csh,
 basicstyle=\normalsize\ttfamily,
@@ -118,6 +120,7 @@ backgroundcolor=\color{white},
 \newcommand{\BetreuerDHBW}{Dr. Werner Geiger}
 
 \newcommand{\Was}{Bachelorarbeit}
+\newcommand{\Jahr}{2018}
 % Wird auf dem Deckblatt in der Erklärung benutzt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,10 +181,11 @@ Gutachter/in der Studienakademie	 & \BetreuerDHBW		\\
 
 \selectlanguage{ngerman}
 %\begin{abstract}
+\include{abstract}
 %\end{abstract}
 
-
 \newpage
+\include{sperrvermerk}
 \include{eid_erklaerung}
 \tableofcontents           % Inhaltsverzeichnis hier ausgeben
 \listoffigures             % Liste der Abbildungen
