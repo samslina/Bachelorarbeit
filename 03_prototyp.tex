@@ -2,11 +2,47 @@
 Das Ziel dieser Arbeit ist eine erweiterte Export-Funktion anhand eines Prototyp zu konzipieren und umzusetzen. In diesem Kapitel handelt es sich um das Thema der Prototyp. Dabei wird definiert, was ein Prototyp ist, welche Eigenschaft ein Prototyp besitzen soll und welche Arten es existieren. Zusätzlich wird ein standardisierter Ablauf eines Prototyps geschildert. Am Ende werden Vor- und Nachteile eines solchen Vorgehensmodell erläutert und Alternativen vorgestellt.
 
 \section{Definition} \label{prot:Defintion}
-\definition{prototype - 1913}{An original or model after which anything is copied; the pattern of anything to be engraved, or otherwise copied, cast, or the like; a primary form; exemplar;archetype}
+Der Begriff \qmUO{Prototyp} hat eine große Bereichsabdeckung. Dazu gehört die allgemeine Definition von Prototyp, der Prototyp in der Softwareentwicklung und das Konzept des Prototypings. 
+%-------------------------------------------------------------------------%
+%-------------------------Protottyp allgemien ----------------------------%
+%-------------------------------------------------------------------------%
+\unterpunkt{Prototyp allgemein}
+Nach \citeauthor{Brockhaus.1992}\,\cite{Brockhaus.1992} ist ein Prototyp die erste betriebsfähige Ausfertigung eines Gerätes oder einer Maschine. Anhand dieser Definition wird der Fakt, dass Prototypen eine lange Zeit vor allem in elektrischen und mechanischen Disziplinen verwendet wurden, nur bestätigt. Der Begriff bezeichnet hierbei die erste Version eines Produktes in der Orginalgröße, Eigenschaften und die Qualitäten des späteren Produktes. Mithilfe des Prototypen kann das Produkt getestet, Erfahrungen gesammelt werden und dient als ein Teil des Lernprozesses. Prototyping wird im der allgemeinen Definition als die Tätigkeit der Erstellung eines Prototyps definiert und ist somit eine wohldefinierte Phase in dem Entwicklungsprozess. \vergleich{Bleek.2002}
+%-------------------------------------------------------------------------%
+%-------------------- Protottyp in der Softwareentwicklung ---------------%
+%-------------------------------------------------------------------------%
+\unterpunkt{Prototyp in der Softwareentwicklung}
+In der Softwareentwicklung existieren mehrere Definitionen. 
 
-\definition{prototype - 2004}{1. An original type, form, or instance serving as a basis or standard for later stages. 2. An original, full-scale, and usually working model of a new product or new version of an existing product. 3. An early, typical example}
+\definition{prototype}{1. An original type, form, or instance serving as a basis or standard for later stages. 2. An original, full-scale, and usually working model of a new product or new version of an existing product. \cite{Arnowitz.2007}}
 
-\section{Eigenschaften} \label{prot:Eigenschaften}
+Eine Definition ist von \citeauthor{Arnowitz.2007}. Die Autoren definierten in \citetitle{Arnowitz.2007} \cite{Arnowitz.2007}, das ein \qmUO{Prototype} als eine Art Originaltyp, -formular oder -instanz ist und dient als eine Grundlage oder ein Standard für spätere Phasen in der Entwicklung. Der Prototyp ist dabei bereits ein funktionsfähiges Modell eines entweder neuen Produktes oder eine neue Version eines bereits bestehenden Produktes. \vergleich{Arnowitz.2007}
+
+\definition{prototype}{A prototype is any attempt to realize any aspect of software content. \cite{Arnowitz.2007}}
+
+Ein Prototyp ist jeder Versuch oder irgendein Aspekt eines Software-Inhaltes zu verwirklichen, wird ebenfalls von \citeauthor{Arnowitz.2007} definiert. Dabei kann ein Prototyp eine Realisierung von Interaktionen oder Navigation von einem Punkt in einer Software zu einem anderen sein. Nebenan kann ein Prototyp auch ein hierarchisches System eines Informationsdesgins sein, welches vom Aussehen und Verhalten der endgültigen Software abtrennt.\vergleich{Arnowitz.2007}
+
+\definition{prototype}{So dienen Prototypen (...) niemals der Vorbereitung der Serienproduktion. (...) Diese Tatsache relativiert die ursprüngliche Bedeutung von „erster seiner Art“. (...) in der Software-Entwicklung ist nicht klar, in welchem Zusammenhang der Prototyp zum späteren Produkt steht.\cite{Bleek.2002}}
+
+Nach der Definition von \citeauthor{Bleek.2002} werden Prototypen in der Softwareentwicklung nicht für die Vorbereitung einer Serienproduktion erstellt. Der Grund hierfür ist, dass in der Softwareentwicklung im eigentlichen Sinne keine Serienproduktion existiert. Vielmehr wird das Ergebnis häufig zusätzlich in eine übergeordnete Systementwicklung eingebettet und stellt ein einzelnes Produkt dar. Somit steht keine Beziehung mehr zum Ausdruck \qmUO{erster einer Art} mit dem Begriff \qmUO{Prototyp}. 
+Laut dieser Definition ist nicht klar, in welchen Zusammenhang der Prototyp in der späteren Softwareentwicklung zum späteren Produkt steht. \vergleich{Bleek.2002}
+%-------------------------------------------------------------------------%
+%----------------------------- Protottyping ------------------------------%
+%-------------------------------------------------------------------------%
+\unterpunkt{Prototyping}
+Wie bereits der Begriff \qmUO{Prototyp} hat auch das Konzept \qmUO{Prototyping} mehrere Definitionen, die sich im eigentlichen Sinne kaum Unterscheiden.
+
+
+\definition{Prototyping}{In vielen Projekten stehen die Anforderungen an das zu entwickelnde System nicht von Anfang an fest. Das Konzept \qmUO{Prototyping} nährt sich schrittweise dem Zielsystem mithilfe von Prototypen. \cite{Broy.2013}}
+
+\citeauthor{Broy.2013} definieren Prototyping als ein Konzept, welches sich schrittweise an das System mithilfe von Prototpyen nährt. Der Hintergrund liegt in der Softwareentwicklung selbst. Oft stehen die Anforderungen der Projekte an das zu entwickelnde System nicht von Anfang an fest. So kann mithilfe von Prototypen sich an das zu entwickelnde System nähern und in das Produktiv-System integriert werden.
+
+\definition{Prototyping}{Prototyping im Software Engineering hauptsächlich eine Methode zur Anforderungsermittlung und –verifikation. Es unterstützt den Kommunikationsprozess zwischen Entwicklern und Benutzern. Mit Hilfe von Prototyping kann den Benutzern eines Systems dessen zukünftige Arbeitsweise demonstriert werden. \cite{Bleek.2002}}
+
+
+
+
+\section{Eigenschaften und Ziele} \label{prot:Eigenschaften}
 
 
 

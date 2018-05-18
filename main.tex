@@ -8,6 +8,8 @@
 
 \usepackage[utf8]{inputenc}        % UTF-8 codierte Dateien
 
+\usepackage[T1]{fontenc}
+
 \usepackage{bericht}
 
 \usepackage{gradientframe}
@@ -34,7 +36,8 @@
 
 \usepackage{subfigure}
 
-\usepackage[onehalfspacing]{setspace}
+\usepackage{setspace}
+\onehalfspacing
 
 \usepackage{listings}             % Include the listings-package for Code
 %%\lstset{language=[Sharp]C} % Set your language (you can change the language for each code-block optionally)
@@ -178,9 +181,9 @@ Gutachter/in der Studienakademie	 & \BetreuerDHBW		\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Nur für Bachelorarbeiten einfügen:
-
 \selectlanguage{ngerman}
 %\begin{abstract}
+\onehalfspacing
 \include{abstract}
 %\end{abstract}
 
@@ -288,9 +291,5 @@ breaklines=true
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 
 \end{document}

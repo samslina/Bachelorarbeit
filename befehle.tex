@@ -18,9 +18,21 @@
 \newcommand{\definition}[2]{
 \begin{leftbar}
 %	\centering
-	\textbf{Definition:}\textit{#1}:\newline
+	\textbf{Definition: }\textit{#1}\newline
      #2 
 \end{leftbar}
+}
+
+\newcommand{\unterpunkt}[1]{
+    \newline \abschnitt
+    \textbf{#1}
+    \abschnitt
+}
+
+\newcommand{\unterunterpunkt}[1]{
+    \newline \abschnitt
+    \textsc{#1}
+    \abschnitt
 }
 
 
@@ -31,3 +43,8 @@
 \newcommand{\qmO}[1]{\glqq{}#1\grqq{}}
 
 
+\newcommand{\vergleich}[1]{
+    [Vgl. \cite{#1}]
+}
+
+\newcommand{\autorZitat}[1]{\citeauthor{#1}  \cite{#1}}
